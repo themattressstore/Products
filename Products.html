@@ -2,74 +2,231 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luxury Video Background</title>
+  <title>Schedule Showroom Visit</title>
   <style>
-    /* Make video fill the background */
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
+    body {
       font-family: Arial, sans-serif;
+      background: url('https://i.postimg.cc/nz6ZNGBP/rolfbenz-mailand2025-04-022.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
     }
 
-    .bg-video {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      object-fit: cover;
-      z-index: -1;
+    .form-container {
+      background: rgba(30, 30, 30, 0.7);
+      padding: 40px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 450px;
     }
 
-    .overlay {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0,0,0,0.4); /* optional dark overlay */
-      z-index: 0;
-    }
-
-    .content {
-      position: relative;
-      z-index: 1;
-      color: white;
+    h2 {
       text-align: center;
-      padding-top: 100px;
+      color: #f0f0f0;
+      font-size: 28px;
+      margin-bottom: 30px;
+      font-weight: bold;
     }
 
-    h1 {
-      font-size: 48px;
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+      color: #ffffff;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
       margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      box-sizing: border-box;
+      color: #000000;
+      background-color: rgba(255,255,255,0.9);
     }
 
-    p {
-      font-size: 20px;
+    input::placeholder {
+      color: #7a7a7a;
     }
 
-    @media screen and (max-width: 600px) {
-      h1 { font-size: 32px; }
-      p { font-size: 16px; }
+    select option {
+      color:#000000;
+    }
+
+    .datetime-container {
+      display: flex;
+      gap: 10px;
+    }
+
+    .datetime-item {
+      flex: 1;
+    }
+
+    .friendly-message {
+      text-align: center;
+      color: #00008B;
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    button {
+      width: 100%;
+      background-color: #ffffff;
+      color: #000000;
+      padding: 14px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e6e6e6;
+    }
+
+    .success-message {
+      text-align: center;
+      color: white;
+      margin-top: 15px;
+      display: none;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
-  <!-- Background video -->
-  <video class="bg-video" autoplay muted loop playsinline>
-    <source src="https://cdn.streamable.com/video/mp4/2vyn5a.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+<div class="form-container">
+  <h2>Schedule Your Showroom Visit</h2>
 
-  <!-- Optional dark overlay -->
-  <div class="overlay"></div>
+  <form id="visitForm">
+    <label>Name:</label>
+    <input type="text" name="name" placeholder="Your Name" required>
 
-  <!-- Content on top -->
-  <div class="content">
-    <h1>Welcome to Royal Quartet</h1>
-    <p>Luxury living showcased behind the scenes</p>
+    <div class="datetime-container">
+      <div class="datetime-item">
+        <label>Date:</label>
+        <input type="date" name="visitDate" id="visitDate" required>
+      </div>
+
+      <div class="datetime-item">
+        <label>Time:</label>
+        <select name="visitTime" required>
+          <option value="" disabled selected>Select a time</option>
+          <option value="06:00 AM">06:00 AM</option>
+          <option value="06:30 AM">06:30 AM</option>
+          <option value="07:00 AM">07:00 AM</option>
+          <option value="07:30 AM">07:30 AM</option>
+          <option value="08:00 AM">08:00 AM</option>
+          <option value="08:30 AM">08:30 AM</option>
+          <option value="09:00 AM">09:00 AM</option>
+          <option value="09:30 AM">09:30 AM</option>
+          <option value="10:00 AM">10:00 AM</option>
+          <option value="10:30 AM">10:30 AM</option>
+          <option value="11:00 AM">11:00 AM</option>
+          <option value="11:30 AM">11:30 AM</option>
+          <option value="12:00 PM">12:00 PM</option>
+          <option value="12:30 PM">12:30 PM</option>
+          <option value="01:00 PM">01:00 PM</option>
+          <option value="01:30 PM">01:30 PM</option>
+          <option value="02:00 PM">02:00 PM</option>
+          <option value="02:30 PM">02:30 PM</option>
+          <option value="03:00 PM">03:00 PM</option>
+          <option value="03:30 PM">03:30 PM</option>
+          <option value="04:00 PM">04:00 PM</option>
+          <option value="04:30 PM">04:30 PM</option>
+          <option value="05:00 PM">05:00 PM</option>
+          <option value="05:30 PM">05:30 PM</option>
+          <option value="06:00 PM">06:00 PM</option>
+          <option value="06:30 PM">06:30 PM</option>
+          <option value="07:00 PM">07:00 PM</option>
+          <option value="07:30 PM">07:30 PM</option>
+          <option value="08:00 PM">08:00 PM</option>
+          <option value="08:30 PM">08:30 PM</option>
+          <option value="09:00 PM">09:00 PM</option>
+          <option value="09:30 PM">09:30 PM</option>
+          <option value="10:00 PM">10:00 PM</option>
+        </select>
+      </div>
+    </div>
+
+    <label>Showroom Location:</label>
+    <select name="visitLocation" required>
+      <option value="" disabled selected>Select a location</option>
+      <option value="Armani Casa - Dubai Mall">Armani Casa - Dubai Mall</option>
+      <option value="Bentley Home - Dubai Mall">Bentley Home - Dubai Mall</option>
+      <option value="Bugatti Home - Dubai Mall">Bugatti Home - Dubai Mall</option>
+      <option value="Rolf Benz - Dubai Mall">Rolf Benz - Dubai Mall</option>
+      <option value="Chateau D'Ax - Dubai Hills Mall">Chateau D'Ax - Dubai Hills Mall</option>
+    </select>
+
+    <p class="friendly-message"></p>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div class="success-message" id="successMessage">
+    Thank you! Your Showroom visit has been scheduled.
   </div>
+</div>
+
+<script>
+  const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbz_tBWZiALEsMxF3a5p-LnU09XQ5-_wRn7AJ9lK6q4a0QytFLvWpw_yZYuM1rAqKaaJVA/exec";
+
+  // Set minimum date to today
+  const today = new Date().toISOString().split("T")[0];
+  document.getElementById('visitDate').setAttribute("min", today);
+
+  // Capture email from URL (?email=...)
+  const params = new URLSearchParams(window.location.search);
+  const email = params.get("email") || "Not Provided";
+
+  // Form submission
+  document.getElementById('visitForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const form = this;
+    const button = form.querySelector('button');
+    button.disabled = true;
+    button.textContent = "Submitting...";
+
+    // Format date
+    const dateInput = document.getElementById('visitDate').value;
+    const dateParts = dateInput.split("-");
+    const formattedDate = dateParts[2] + "/" + dateParts[1] + "/" + dateParts[0];
+
+    const formData = new FormData(form);
+    formData.set("visitDate", formattedDate);
+    formData.append("email", email); // Append captured email
+
+    // Submit to Google Sheets
+    fetch(WEB_APP_URL, {
+      method: "POST",
+      mode: 'no-cors',
+      body: formData
+    })
+    .then(() => {
+      form.reset();
+      document.getElementById('successMessage').style.display = "block";
+    })
+    .catch(err => {
+      alert("Something went wrong. Your submission may not have been saved.");
+      console.error(err);
+    })
+    .finally(() => {
+      button.disabled = false;
+      button.textContent = "Submit";
+    });
+  });
+</script>
 
 </body>
 </html>
