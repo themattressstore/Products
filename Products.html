@@ -30,6 +30,7 @@
       font-size: 28px;
       margin-bottom: 30px;
       font-weight: bold;
+      margin-top: 5px;
     }
 
     label {
@@ -56,7 +57,7 @@
     }
 
     select option {
-      color:#000000;
+      color: #000000;
     }
 
     .datetime-container {
@@ -105,129 +106,128 @@
 </head>
 <body>
 
-<div class="form-container">
-  <h2>Schedule Your Showroom Visit</h2>
+  <div class="form-container">
+    <h2>Schedule Your Showroom Visit</h2>
 
-  <form id="visitForm">
-    <label>Name:</label>
-    <input type="text" name="name" placeholder="Your Name" required>
+    <form id="visitForm">
+      <label>Name:</label>
+      <input type="text" name="name" placeholder="Your Name" required>
 
-    <div class="datetime-container">
-      <div class="datetime-item">
-        <label>Date:</label>
-        <input type="date" name="visitDate" id="visitDate" required>
+      <div class="datetime-container">
+        <div class="datetime-item">
+          <label>Date:</label>
+          <input type="date" name="visitDate" id="visitDate" required>
+        </div>
+
+        <div class="datetime-item">
+          <label>Time:</label>
+          <select name="visitTime" required>
+            <option value="" disabled selected>Select a time</option>
+            <option value="06:00 AM">06:00 AM</option>
+            <option value="06:30 AM">06:30 AM</option>
+            <option value="07:00 AM">07:00 AM</option>
+            <option value="07:30 AM">07:30 AM</option>
+            <option value="08:00 AM">08:00 AM</option>
+            <option value="08:30 AM">08:30 AM</option>
+            <option value="09:00 AM">09:00 AM</option>
+            <option value="09:30 AM">09:30 AM</option>
+            <option value="10:00 AM">10:00 AM</option>
+            <option value="10:30 AM">10:30 AM</option>
+            <option value="11:00 AM">11:00 AM</option>
+            <option value="11:30 AM">11:30 AM</option>
+            <option value="12:00 PM">12:00 PM</option>
+            <option value="12:30 PM">12:30 PM</option>
+            <option value="01:00 PM">01:00 PM</option>
+            <option value="01:30 PM">01:30 PM</option>
+            <option value="02:00 PM">02:00 PM</option>
+            <option value="02:30 PM">02:30 PM</option>
+            <option value="03:00 PM">03:00 PM</option>
+            <option value="03:30 PM">03:30 PM</option>
+            <option value="04:00 PM">04:00 PM</option>
+            <option value="04:30 PM">04:30 PM</option>
+            <option value="05:00 PM">05:00 PM</option>
+            <option value="05:30 PM">05:30 PM</option>
+            <option value="06:00 PM">06:00 PM</option>
+            <option value="06:30 PM">06:30 PM</option>
+            <option value="07:00 PM">07:00 PM</option>
+            <option value="07:30 PM">07:30 PM</option>
+            <option value="08:00 PM">08:00 PM</option>
+            <option value="08:30 PM">08:30 PM</option>
+            <option value="09:00 PM">09:00 PM</option>
+            <option value="09:30 PM">09:30 PM</option>
+            <option value="10:00 PM">10:00 PM</option>
+          </select>
+        </div>
       </div>
 
-      <div class="datetime-item">
-        <label>Time:</label>
-        <select name="visitTime" required>
-          <option value="" disabled selected>Select a time</option>
-          <option value="06:00 AM">06:00 AM</option>
-          <option value="06:30 AM">06:30 AM</option>
-          <option value="07:00 AM">07:00 AM</option>
-          <option value="07:30 AM">07:30 AM</option>
-          <option value="08:00 AM">08:00 AM</option>
-          <option value="08:30 AM">08:30 AM</option>
-          <option value="09:00 AM">09:00 AM</option>
-          <option value="09:30 AM">09:30 AM</option>
-          <option value="10:00 AM">10:00 AM</option>
-          <option value="10:30 AM">10:30 AM</option>
-          <option value="11:00 AM">11:00 AM</option>
-          <option value="11:30 AM">11:30 AM</option>
-          <option value="12:00 PM">12:00 PM</option>
-          <option value="12:30 PM">12:30 PM</option>
-          <option value="01:00 PM">01:00 PM</option>
-          <option value="01:30 PM">01:30 PM</option>
-          <option value="02:00 PM">02:00 PM</option>
-          <option value="02:30 PM">02:30 PM</option>
-          <option value="03:00 PM">03:00 PM</option>
-          <option value="03:30 PM">03:30 PM</option>
-          <option value="04:00 PM">04:00 PM</option>
-          <option value="04:30 PM">04:30 PM</option>
-          <option value="05:00 PM">05:00 PM</option>
-          <option value="05:30 PM">05:30 PM</option>
-          <option value="06:00 PM">06:00 PM</option>
-          <option value="06:30 PM">06:30 PM</option>
-          <option value="07:00 PM">07:00 PM</option>
-          <option value="07:30 PM">07:30 PM</option>
-          <option value="08:00 PM">08:00 PM</option>
-          <option value="08:30 PM">08:30 PM</option>
-          <option value="09:00 PM">09:00 PM</option>
-          <option value="09:30 PM">09:30 PM</option>
-          <option value="10:00 PM">10:00 PM</option>
-        </select>
-      </div>
+      <label>Showroom Location:</label>
+      <select name="visitLocation" required>
+        <option value="" disabled selected>Select a location</option>
+        <option value="Armani Casa - Dubai Mall">Armani Casa - Dubai Mall</option>
+        <option value="Bentley Home - Dubai Mall">Bentley Home - Dubai Mall</option>
+        <option value="Bugatti Home - Dubai Mall">Bugatti Home - Dubai Mall</option>
+        <option value="Rolf Benz - Dubai Mall">Rolf Benz - Dubai Mall</option>
+        <option value="Chateau D'Ax - Dubai Hills Mall">Chateau D'Ax - Dubai Hills Mall</option>
+      </select>
+
+      <p class="friendly-message"></p>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="success-message" id="successMessage">
+      Thank you! Your Showroom visit has been scheduled.
     </div>
-
-    <label>Showroom Location:</label>
-    <select name="visitLocation" required>
-      <option value="" disabled selected>Select a location</option>
-      <option value="Armani Casa - Dubai Mall">Armani Casa - Dubai Mall</option>
-      <option value="Bentley Home - Dubai Mall">Bentley Home - Dubai Mall</option>
-      <option value="Bugatti Home - Dubai Mall">Bugatti Home - Dubai Mall</option>
-      <option value="Rolf Benz - Dubai Mall">Rolf Benz - Dubai Mall</option>
-      <option value="Chateau D'Ax - Dubai Hills Mall">Chateau D'Ax - Dubai Hills Mall</option>
-    </select>
-
-    <p class="friendly-message"></p>
-
-    <button type="submit">Submit</button>
-  </form>
-
-  <div class="success-message" id="successMessage">
-    Thank you! Your Showroom visit has been scheduled.
   </div>
-</div>
 
-<script>
-const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbz3k9kyNW_szvmiyLHMq6GwBYVgSjb0p_xxRfl7BUR5WmW0JqYRMM6rUm_krNjumpDq6w/exec";
+  <script>
+    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbz3k9kyNW_szvmiyLHMq6GwBYVgSjb0p_xxRfl7BUR5WmW0JqYRMM6rUm_krNjumpDq6w/exec";
 
+    // Minimum selectable date = today
+    const today = new Date().toISOString().split("T")[0];
+    document.getElementById('visitDate').setAttribute("min", today);
 
-  // Set minimum date to today
-  const today = new Date().toISOString().split("T")[0];
-  document.getElementById('visitDate').setAttribute("min", today);
+    document.getElementById('visitForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const form = this;
+      const button = form.querySelector('button');
 
-  // Capture email from URL (?email=...)
-  const params = new URLSearchParams(window.location.search);
-  const email = params.get("email") || "Not Provided";
+      // Disable button while submitting
+      button.disabled = true;
+      button.textContent = "Submitting...";
 
-  // Form submission
-  document.getElementById('visitForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    const form = this;
-    const button = form.querySelector('button');
-    button.disabled = true;
-    button.textContent = "Submitting...";
+      // Format date
+      const dateInput = document.getElementById('visitDate').value;
+      const dateParts = dateInput.split("-");
+      const formattedDate = dateParts[2] + "/" + dateParts[1] + "/" + dateParts[0];
 
-    // Format date
-    const dateInput = document.getElementById('visitDate').value;
-    const dateParts = dateInput.split("-");
-    const formattedDate = dateParts[2] + "/" + dateParts[1] + "/" + dateParts[0];
+      // Capture email from URL
+      const params = new URLSearchParams(window.location.search);
+      const email = params.get("email") || "Not Provided";
 
-    const formData = new FormData(form);
-    formData.set("visitDate", formattedDate);
-    formData.append("email", email); // Append captured email
+      const formData = new FormData(form);
+      formData.set("visitDate", formattedDate);
+      formData.set("email", email); // Add email to submission
 
-    // Submit to Google Sheets
-    fetch(WEB_APP_URL, {
-      method: "POST",
-      mode: 'no-cors',
-      body: formData
-    })
-    .then(() => {
-      form.reset();
-      document.getElementById('successMessage').style.display = "block";
-    })
-    .catch(err => {
-      alert("Something went wrong. Your submission may not have been saved.");
-      console.error(err);
-    })
-    .finally(() => {
-      button.disabled = false;
-      button.textContent = "Submit";
+      fetch(WEB_APP_URL, {
+        method: "POST",
+        mode: 'no-cors',
+        body: formData
+      })
+      .then(() => {
+        form.reset();
+        document.getElementById('successMessage').style.display = "block";
+      })
+      .catch(err => {
+        alert("Something went wrong. Your submission may not have been saved.");
+        console.error(err);
+      })
+      .finally(() => {
+        button.disabled = false;
+        button.textContent = "Submit";
+      });
     });
-  });
-</script>
+  </script>
 
 </body>
 </html>
